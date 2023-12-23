@@ -1,144 +1,197 @@
 <!doctype html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>---</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <title>ตุ๊กตา Dino</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-  </head>
-  <body>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
     <div class="container">
-        <!-- navbar -->
+        <!-- Navbar -->
         <nav class="navbar navbar-expand-lg bg-light">
             <div class="container-fluid">
-              <a class="navbar-brand" href="#">Navbar</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Dropdown
-                    </a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Action</a></li>
-                      <li><a class="dropdown-item" href="#">Another action</a></li>
-                      <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                <a class="navbar-brand" href="#">Navbar</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Dropdown
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled">Disabled</a>
+                        </li>
                     </ul>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link disabled">Disabled</a>
-                  </li>
-                </ul>
-                <form class="d-flex" role="search">
-                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                  <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
-              </div>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
             </div>
-          </nav>
-
-        <!-- alert -->
+        </nav>
+        <!-- Alert -->
         <div class="alert alert-primary alert-dismissible" role="alert">
             <i class="bi bi-info-circle-fill"></i> ร้านค้าพักร้อนถึง Dec 26, 2023 สินค้าอาจเกิดความล่าช้า
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
-
-        <!-- breadcrumb -->
-        <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+        <!-- Breadcrumbs -->
+        <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);"
+            aria-label="breadcrumb">
             <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="#">หน้าหลัก</a></li>
-              <li class="breadcrumb-item" aria-current="page"><a href="#">หมวดหมู่</a></li>
-              <li class="breadcrumb-item" aria-current="page"><a href="#">ซื้อสินค้า</a></li>
+                <li class="breadcrumb-item"><a href="#">หน้าหลัก</a></li>
+                <li class="breadcrumb-item" aria-current="page"><a href="#">หมวดหมู่</a></li>
+                <li class="breadcrumb-item" aria-current="page"><a href="#">ซื้อสินค้า</a></li>
             </ol>
-          </nav>
-
-        <!-- 2 columns : carousel / information -->
+        </nav>
         <div class="row">
             <div class="col-lg-6">
+                <!-- casousel -->
                 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
                     <div class="carousel-indicators">
-                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
                     </div>
                     <div class="carousel-inner">
-                      <div class="carousel-item active">
-                        <img src="https://lzd-img-global.slatic.net/g/p/05d1765a9cf6fda687cec26166ef587f.jpg_2200x2200q80.jpg_.webp" class="d-block w-100" alt="dino">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="https://lzd-img-global.slatic.net/g/p/fbbab88de25062f85eb950e38733f334.jpg_2200x2200q80.jpg_.webp" class="d-block w-100" alt="dino">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="https://lzd-img-global.slatic.net/g/p/48e158ad999b5db0760beec918d8e754.jpg_2200x2200q80.jpg_.webp" class="d-block w-100" alt="dino">
-                      </div>
+                        <div class="carousel-item active">
+                            <img src="https://lzd-img-global.slatic.net/g/p/05d1765a9cf6fda687cec26166ef587f.jpg_2200x2200q80.jpg_.webp"
+                                class="d-block w-100" alt="dino">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://lzd-img-global.slatic.net/g/p/fbbab88de25062f85eb950e38733f334.jpg_2200x2200q80.jpg_.webp"
+                                class="d-block w-100" alt="dino">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://lzd-img-global.slatic.net/g/p/48e158ad999b5db0760beec918d8e754.jpg_2200x2200q80.jpg_.webp"
+                                class="d-block w-100" alt="dino">
+                        </div>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Previous</span>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
                     </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Next</span>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
                     </button>
-                  </div>
+                </div>
             </div>
+
             <div class="col-lg-6">
+                <!-- Badge -->
                 <h1>ของเล่นตุ๊กตาหมอนนอนไดโนเสาร์ <span class="badge bg-danger">New!</span></h1>
-                <i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"> </i><i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i> <a href="#">16 คะแนน</a>
-                <!-- <br>
-                <div class="row-inline">
-                    <div class="col-lg-6 text-start">
-                        
+                <div class="row">
+                    <div class="col-lg-6">
+                        <i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"> </i><i class="bi bi-star-fill"></i> <i class="bi bi-star-fill pe-3"></i><a href="#">16 คะแนน</a>                        
                     </div>
 
-                    <div class="col-lg-6 text-start">
-                        <i class="bi bi-share"></i> <i class="bi bi-heart"></i>
+                    <div class="col-lg-6 text-end">
+                        <i class="bi bi-share pe-1"></i> <i class="bi bi-heart"></i>
                     </div>
-                </div> -->
-                <!-- <br>
-                <div class="row-inline">
-                    <p>หมวดหมู่ของสินค้า</p><p style="text-align: end;">ฟรีค่าส่ง</p>
+                    <br><br>
+                    <p class="fs-6">แบรนด์: <a href="#">No Brand</a> | <a href="#">เพิ่มเติม ตุ๊กตาผ้าขน จาก No Brand in TH</a></p>
                 </div>
                 <hr>
-
                 <div class="row">
-                    <p class="fs-3">฿153.00</p>
-                    <p class="fs-6"><del>฿260.00</del></p>
-                    <p>จำนวน</p>
-                    <div class="input-group mb-3">
-                        <button class="btn btn-outline-secondary" type="button">Button</button>
-                        <button class="btn btn-outline-secondary" type="button">Button</button>
-                        <input type="text" class="form-control" placeholder="" aria-label="Example text with two button addons">
-                      </div>
+                    <div class="col-lg-6">
+                        <p class="fs-3 fw-bold">฿145.08</p>
+                        <p><del class="text-muted pe-4">฿265.00</del><span>-45%</span></p>
+                        <p>จำนวน</p>
+                        <div class="input-group mb-3">
+                            <button class="btn btn-outline-secondary" type="button">-</button>
+                            <input type="number" class="form-control text-center" placeholder="" aria-label="Example text with two button addons">
+                            <button class="btn btn-outline-secondary" type="button">+</button>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <p>ชื่อร้านค้า : Beibei Toy</p>
+                    </div>
                 </div>
-                <hr> -->
-            
+                <div class="d-grid gap-2">
+                    <button class="btn btn-success" type="button">ใส่สินค้าในตะกร้า</button>
+                </div>
             </div>
         </div>
-
-        <!-- 2 columns : accordion / card -->
+        <br>
         <div class="row">
             <div class="col-lg-9">
-
+                <!-- Accordian -->
+                <p>Product Details</p>
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            รายละเอียดสินค้า
+                        </button>
+                      </h2>
+                      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            ภายในบรรจุภัณฑ์ประกอบด้วย: ตุ๊กตาไดโนเสาร์ของเล่น<br>สี: ตามที่แสดง<br>วัสดุ: ผ้าฝ้าย<br>ขนาด: ประมาณ 16 ซม.<br>อายุที่แนะนำ: 2-12
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            คุณสมบัติ
+                        </button>
+                      </h2>
+                      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            การแบ่งประเภทไดโนเสาร์ตุ๊กตาสำหรับชั่วโมงของความสนุก Dino!<br>
+                            รวม: ไดโนเสาร์ตุ๊กตาหนึ่งตัวไดโนเสาร์แต่ละตัวมีความยาว11นิ้ว<br>
+                            ทำความสะอาดง่าย: ไดโนเสาร์เหล่านี้คุณภาพสูงและทำจากวัสดุที่ล้างทำความสะอาดได้ออกแบบด้วยรายละเอียดที่สมจริง<br>
+                            ไอเดียของขวัญที่ยอดเยี่ยมไดโนเสาร์ตุ๊กตาเหล่านี้จะทำให้ของขวัญคริสต์มาสสมบูรณ์แบบสำหรับคนรัก Dino ตัวน้อยของคุณ!<br>
+                            สีขี้เล่น: ไดโนเสาร์เหล่านี้ทำจากผ้าย้อมสีที่สวยงามเป็นเวลาหลายชั่วโมงในการเล่นสำหรับลูกน้อยของคุณเหมาะสำหรับใส่ถุงเท้าคริสต์มาส
+                        </div>
+                      </div>
+                    </div>
+                </div>
             </div>
             <div class="col-lg-3">
-                
+                <!-- Card -->
+                <p>Sponsored Products</p>
+                <div class="card" style="width: 18rem;">
+                    <img src="https://lzd-img-global.slatic.net/g/p/8246bf80c5ba6e17c7fb7f1bc9d74d66.jpg_2200x2200q80.jpg_.webp" class="card-img-top" alt="dino">
+                    <div class="card-body">
+                      <p class="card-text">ของเล่นตุ๊กตาหมอนนอนไดโนเสาร์<br>฿265.00</p>
+                    </div>
+                </div>
             </div>
         </div>
-
-
-
     </div>
-  </body>
+</body>
 </html>
