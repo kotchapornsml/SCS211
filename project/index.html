@@ -2,40 +2,20 @@
 <html lang="en">
 
 <head>
-    <title>miewmiewlucky</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <?php include("head.php") ?>
 </head>
 
 <body>
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-            <a class="navbar-brand">MIEWMIEW</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-link active" aria-current="page" href="#">หน้าหลัก</a>
-                    <a class="nav-link disabled">เกี่ยวกับ</a>
-                    <a class="nav-link disabled">บริการ</a>
-                    <a class="nav-link disabled">เวลาเปิดบริการ</a>
-                    <a class="nav-link disabled">ฟีเจอร์</a>
-                </div>
-            </div>
-        </div>
+        <?php include("nav.php") ?>
     </nav>
 
     <!-- carousel -->
-    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+    <div id="carouselExampleSlidesOnly" class="carousel slide" style="text-align: center" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="https://static.wixstatic.com/media/5f33c3_09de112bef964338b225179fb5cf8079~mv2.png/v1/fill/w_768,h_299,al_c,lg_1,q_85,enc_auto/5f33c3_09de112bef964338b225179fb5cf8079~mv2.png"
-                    class="d-block w-100" alt="cat">
+                <img src="https://static.wixstatic.com/media/5f33c3_09de112bef964338b225179fb5cf8079~mv2.png/v1/fill/w_768,h_299,al_c,lg_1,q_85,enc_auto/5f33c3_09de112bef964338b225179fb5cf8079~mv2.png" class="img-fluid" style="height: 500px;" alt="cat">
             </div>
         </div>
     </div>
@@ -45,219 +25,435 @@
 
         <div class="row">
             <!-- cat1 -->
-            <div class="col-lg-3">
-                <div class="card mb-4 me-4" style="width: 18rem;">
-                    <img src="https://static.wixstatic.com/media/5f33c3_0b47a9cd0f7549f4a62b03afc17a7664~mv2.webp"
-                        class="card-img-top mt-2 rounded" alt="cat-persian">
-                    <div class="card-body">
-                        <h5 class="card-title">เปอร์เซีย</h5>
-                        <h6 class="card-subtitle mb-2 text-body-secondary">(Persian)</h6>
-                        <p class="card-text">ราคาแมวเปอร์เซีย:
-                        <ul>
-                            <li>พันธุ์หน้าตุ๊กตา<br>ราคา 1,000-8,000 บาท</li>
-                            <li>พันธุ์หน้าบี้<br>ราคา 10,000-100,000 บาท</li>
-                        </ul>
-                        </p>
-                        <button type="button" class="btn btn-outline-primary">ข้อมูลเพิ่มเติม</button>
-                        <button type="button" class="btn btn-outline-warning">วิธีการดูแล</button>
+            <div class="card mb-4 me-4" style="width: 18rem;">
+                <img src="https://static.wixstatic.com/media/5f33c3_0b47a9cd0f7549f4a62b03afc17a7664~mv2.webp" class="card-img-top mt-2 rounded" alt="cat-persian">
+                <div class="card-body">
+                    <h5 class="card-title">เปอร์เซีย</h5>
+                    <h6 class="card-subtitle mb-2 text-body-secondary">(Persian)</h6>
+                    <p class="card-text">ราคาแมวเปอร์เซีย:
+                    <ul>
+                        <li>พันธุ์หน้าตุ๊กตา<br>ราคา 1,000-8,000 บาท</li>
+                        <li>พันธุ์หน้าบี้<br>ราคา 10,000-100,000 บาท</li>
+                    </ul>
+                    </p>
+                    <a href="cat1.php"><button type="button" class="btn btn-outline-primary">ข้อมูลเพิ่มเติม</button></a>
+                    <!-- Button trigger modal -->
+                    <button class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">
+                        วิธีการดูแล
+                    </button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdrop1" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="staticBackdrop1">วิธีดูแลและอาหารการกิน <i class="bi bi-box2-heart"></i></h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    หลายครั้งแมวเปอร์เซียมักถูกมองว่า เลี้ยงยาก กว่าพันธุ์อื่น ๆ ความจริงแล้ว เจ้าแมวเปอร์เซียนั้นไม่ได้เลี้ยงยากอย่างที่คิด แต่ผู้เลี้ยงจะต้องมีเวลาใส่ใจและให้เวลากับพวกมันเยอะ ๆ ไม่ว่าจะเป็นการหมั่นแปรงขนและเช็ดคราบน้ำตา การดูแลสภาพอากาศในบริเวรณที่เลี้ยง
+                                    <br><br>เรื่องอาหารการกิน เพราะเปอร์เซียเป็นแมวที่ไม่ค่อยเคลื่อนไหวเท่าไหร่ เน้นกินและนอนอย่างเดียว ทำให้ส่งผลต่อน้ำหนักตัวและสุขภาพในระยะยาวได้ เจ้าของควรเน้นไปที่โภชนาการที่เน้นไปที่โปรตีน และสารอาหารต่าง ๆ ที่เผาผลาญง่ายและช่วยบำรุงขนให้สวยไปตลอดช่วงอายุของพวกมัน
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal">เข้าใจแล้ว</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
             <!-- cat2 -->
-            <div class="col-lg-3">
-                <div class="card mb-4 me-4" style="width: 18rem;">
-                    <img src="https://static.wixstatic.com/media/5f33c3_4897c289c3de47f2a738436e36a91e61~mv2.jpg/v1/fill/w_647,h_723,al_c,lg_1,q_85,enc_auto/5f33c3_4897c289c3de47f2a738436e36a91e61~mv2.jpg"
-                        class="card-img-top mt-2 rounded" alt="cat-Scottish-Fold">
-                    <div class="card-body">
-                        <h5 class="card-title">สก็อตติช โฟลด์</h5>
-                        <h6 class="card-subtitle mb-2 text-body-secondary">(Scottish Fold)</h6>
-                        <p class="card-text">ราคาแมวสก็อตติช โฟลด์:
-                        <ul>
-                            <li>15,000 - 80,000 บาท</li>
-                        </ul>
-                        </p>
-                        <button type="button" class="btn btn-outline-primary">ข้อมูลเพิ่มเติม</button>
-                        <button type="button" class="btn btn-outline-warning">วิธีการดูแล</button>
+            <div class="card mb-4 me-4" style="width: 18rem;">
+                <img src="https://static.wixstatic.com/media/5f33c3_4897c289c3de47f2a738436e36a91e61~mv2.jpg/v1/fill/w_647,h_723,al_c,lg_1,q_85,enc_auto/5f33c3_4897c289c3de47f2a738436e36a91e61~mv2.jpg" class="card-img-top mt-2 rounded" alt="cat-Scottish-Fold">
+                <div class="card-body">
+                    <h5 class="card-title">สก็อตติช โฟลด์</h5>
+                    <h6 class="card-subtitle mb-2 text-body-secondary">(Scottish Fold)</h6>
+                    <p class="card-text">ราคาแมวสก็อตติช โฟลด์:
+                    <ul>
+                        <li>15,000 - 80,000 บาท</li>
+                    </ul>
+                    </p>
+                    <button type="button" class="btn btn-outline-primary">ข้อมูลเพิ่มเติม</button>
+                    <!-- Button trigger modal -->
+                    <button class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">
+                        วิธีการดูแล
+                    </button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdrop2" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="staticBackdrop2">วิธีดูแลและอาหารการกิน <i class="bi bi-box2-heart"></i></h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    สำหรับการเลี้ยงดูแลสก็อตติช โฟลด์นั้นไม่ใช่เรื่องยาก ไม่จำเป็นต้องหมั่นแปรงขนบ่อย ๆ เพราะสายพันธุ์นี้มีขนสั้น ดังนั้นแค่ 1 ครั้งต่อสัปดาห์กำลังดี สำหรับเจ้าของที่ไม่ค่อยอยู่บ้าน การเลี้ยงสก็อตติช โฟลด์เพียงตัวเดียวนั้นอาจจะไม่เหมาะเท่าไหร่ ควรหาเพื่อนอีกสักหนึ่งตัวไว้ค่อยให้เล่นจะถูกใจพวกมันมากกว่า
+                                    <br><br>ด้านของอาหารการกิน สก็อตติชไม่ใช่แมวที่อ้วนง่าย การจัดสัวส่วนปริมาณอาหาร ให้พอดีกับร่างกายและน้ำหนักตัวก็เพียงพอแล้ว โดยสัดส่วนที่เหมาะสมคือ 60-80 กิโลแคเลอรี่ต่อน้ำหนักตัว
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal">เข้าใจแล้ว</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
             <!-- cat3 -->
-            <div class="col-lg-3">
-                <div class="card mb-4 me-4" style="width: 18rem;">
-                    <img src="https://static.wixstatic.com/media/5f33c3_c20f84e2614446d59ef4b253fdcc2b81~mv2.jpg/v1/fill/w_460,h_480,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/c6a3da_371894b70019463a89f91078c7b062d7~.jpg"
-                        class="card-img-top rounded mt-2" alt="cat-Sphinx">
-                    <div class="card-body">
-                        <h5 class="card-title">สฟิงซ์</h5>
-                        <h6 class="card-subtitle mb-2 text-body-secondary">(Sphinx)</h6>
-                        <p class="card-text">ราคาแมวสฟิงซ์:
-                        <ul>
-                            <li>25,000-100,000 บาท</li>
-                        </ul>
-                        </p>
-                        <button type="button" class="btn btn-outline-primary">ข้อมูลเพิ่มเติม</button>
-                        <button type="button" class="btn btn-outline-warning">วิธีการดูแล</button>
+            <div class="card mb-4 me-4" style="width: 18rem;">
+                <img src="https://static.wixstatic.com/media/5f33c3_c20f84e2614446d59ef4b253fdcc2b81~mv2.jpg/v1/fill/w_460,h_480,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/c6a3da_371894b70019463a89f91078c7b062d7~.jpg" class="card-img-top rounded mt-2" alt="cat-Sphinx">
+                <div class="card-body">
+                    <h5 class="card-title">สฟิงซ์</h5>
+                    <h6 class="card-subtitle mb-2 text-body-secondary">(Sphinx)</h6>
+                    <p class="card-text">ราคาแมวสฟิงซ์:
+                    <ul>
+                        <li>25,000-100,000 บาท</li>
+                    </ul>
+                    </p>
+                    <button type="button" class="btn btn-outline-primary">ข้อมูลเพิ่มเติม</button>
+                    <!-- Button trigger modal -->
+                    <button class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#staticBackdrop3">
+                        วิธีการดูแล
+                    </button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="staticBackdrop3" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdrop3" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="staticBackdrop3">วิธีดูแลและอาหารการกิน <i class="bi bi-box2-heart"></i></h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    ด้วยความที่ไม่มีขน การดูแลผิวไม่ให้มีเหงื่อและความมันสะสมบนผิว สฟิงซ์ควรอาบน้ำ 2-3 เดือนครั้ง และด้วยความที่ผิวพวกมันขนสั้นและมีความบอบบางราวกับผิวเด็ก สฟิงซ์ควรเลี้ยงการโดนแดดจัด ๆ หรือพาออกนอกบ้าน ถ้าจำเป็นจะต้องออกข้างนอกจริง ๆ ให้ทาครีมบาง ๆ ก่อนจะช่วยป้องกันผิวไหม้ได้
+                                    <br><br>อาหารการกิน สฟิงซ์มีกระบวนการเผาผลาญและระบบเมตาบอลิซึ่มที่ต่างจากแมวอื่น ๆ ทำให้ต้องการอาหารปริมาณมากกว่าปกติ โดยเจ้าของสามารถแบ่งอาหารเป็น 2 มื้อให้เพียงพอกับการใช้พลังงานต่อวันของพวกมัน
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal">เข้าใจแล้ว</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
             <!-- cat4 -->
-            <div class="col-lg-3">
-                <div class="card mb-4 me-4" style="width: 18rem;">
-                    <img src="https://static.wixstatic.com/media/5f33c3_eb5ae66bf69942ae8ca5ea620d30a38e~mv2.jpg/v1/fill/w_665,h_738,al_c,lg_1,q_85,enc_auto/5f33c3_eb5ae66bf69942ae8ca5ea620d30a38e~mv2.jpg"
-                        class="card-img-top rounded mt-2" alt="cat-American-Shorthair">
-                    <div class="card-body">
-                        <h5 class="card-title">อเมริกัน ช็อตแฮร์</h5>
-                        <h6 class="card-subtitle mb-2 text-body-secondary">(American Shorthair)</h6>
-                        <p class="card-text">ราคาแมวอเมริกัน ช็อตแฮร์:
-                        <ul>
-                            <li>3,000-40,000 บาท</li>
-                        </ul>
-                        </p>
-                        <button type="button" class="btn btn-outline-primary">ข้อมูลเพิ่มเติม</button>
-                        <button type="button" class="btn btn-outline-warning">วิธีการดูแล</button>
+            <div class="card mb-4 me-4" style="width: 18rem;">
+                <img src="https://static.wixstatic.com/media/5f33c3_eb5ae66bf69942ae8ca5ea620d30a38e~mv2.jpg/v1/fill/w_665,h_738,al_c,lg_1,q_85,enc_auto/5f33c3_eb5ae66bf69942ae8ca5ea620d30a38e~mv2.jpg" class="card-img-top rounded mt-2" alt="cat-American-Shorthair">
+                <div class="card-body">
+                    <h5 class="card-title">อเมริกัน ช็อตแฮร์</h5>
+                    <h6 class="card-subtitle mb-2 text-body-secondary">(American Shorthair)</h6>
+                    <p class="card-text">ราคาแมวอเมริกัน ช็อตแฮร์:
+                    <ul>
+                        <li>3,000-40,000 บาท</li>
+                    </ul>
+                    </p>
+                    <button type="button" class="btn btn-outline-primary">ข้อมูลเพิ่มเติม</button>
+                    <!-- Button trigger modal -->
+                    <button class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#staticBackdrop4">
+                        วิธีการดูแล
+                    </button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="staticBackdrop4" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdrop4" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="staticBackdrop4">วิธีดูแลและอาหารการกิน <i class="bi bi-box2-heart"></i></h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    อเมริกัน ช็อตแฮร์ขึ้นชื่อว่าเป็นแมวที่เลี้ยงง่าย ไม่ค่อยมีโรคประจำสายพันธุ์ ไม่ค่อยผลัดขนบ่อยมากนัก การดูแลเบื้องต้นเช่นแปรงขนอาทิตย์ละครั้ง อาบน้ำ 2-3 เดือนครั้ง
+                                    <br><br>ดูแลโภชนการอาหารให้พอดีในแต่ละวันก็เพียงพอในการดูแลอเมริกัน ช็อตแฮร์ให้แข็งแรงและสวยงามไปตลอดช่วงอายุ
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal">เข้าใจแล้ว</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
             <!-- cat5 -->
-            <div class="col-lg-3">
-                <div class="card mb-4 me-4" style="width: 18rem;">
-                    <img src="https://static.wixstatic.com/media/5f33c3_deedb19648294f16b9e7fad30e55dea5~mv2.jpg/v1/fill/w_590,h_739,al_c,lg_1,q_85,enc_auto/5f33c3_deedb19648294f16b9e7fad30e55dea5~mv2.jpg"
-                        class="card-img-top rounded mt-2" alt="cat-British-Shorthair">
-                    <div class="card-body">
-                        <h5 class="card-title">บริติช ช็อตแฮร์</h5>
-                        <h6 class="card-subtitle mb-2 text-body-secondary">(British Shorthair)</h6>
-                        <p class="card-text">ราคาแมวบริติช ช็อตแฮร์:
-                        <ul>
-                            <li>30,000 - 50,000 บาท</li>
-                        </ul>
-                        </p>
-                        <button type="button" class="btn btn-outline-primary">ข้อมูลเพิ่มเติม</button>
-                        <button type="button" class="btn btn-outline-warning">วิธีการดูแล</button>
+            <div class="card mb-4 me-4" style="width: 18rem;">
+                <img src="https://static.wixstatic.com/media/5f33c3_deedb19648294f16b9e7fad30e55dea5~mv2.jpg/v1/fill/w_590,h_739,al_c,lg_1,q_85,enc_auto/5f33c3_deedb19648294f16b9e7fad30e55dea5~mv2.jpg" class="card-img-top rounded mt-2" alt="cat-British-Shorthair">
+                <div class="card-body">
+                    <h5 class="card-title">บริติช ช็อตแฮร์</h5>
+                    <h6 class="card-subtitle mb-2 text-body-secondary">(British Shorthair)</h6>
+                    <p class="card-text">ราคาแมวบริติช ช็อตแฮร์:
+                    <ul>
+                        <li>30,000 - 50,000 บาท</li>
+                    </ul>
+                    </p>
+                    <button type="button" class="btn btn-outline-primary">ข้อมูลเพิ่มเติม</button>
+                    <!-- Button trigger modal -->
+                    <button class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#staticBackdrop5">
+                        วิธีการดูแล
+                    </button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="staticBackdrop5" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdrop5" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="staticBackdrop5">วิธีดูแลและอาหารการกิน <i class="bi bi-box2-heart"></i></h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    บริติช ช็อตแฮร์เป็นแมวที่ต้องเลี้ยงในบ้านตลอดเวลา สามารถปรับตัวในห้องพักและอพาร์ทเม้นท์ได้ดี และควรพาไปอาบน้ำอย่างน้อย 2 อาทิตย์ครั้งและเป่าขนให้แห้งสนิท เพื่อไม่ให้ผิวหนังอับชื้น รวมถึงตัดเล็บทุก 2 สัปดาห์
+                                    <br><br>อาหารการกิน แม้บริติช ช็อตแฮร์จะไม่เรื่องมากเรื่องการกิน พวกมันเป็นสายพันธุ์ที่อ้วนง่าย ควรเลือกสารอาหารที่มีโปรตีนและคาร์โบไฮเดรตสูง แต่ไขมันต่ำ เพื่อไม่ให้น้ำหนักตัวเกินเกณฑ์ ซึ่งเสี่ยงต่อโรคอ้วน
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal">เข้าใจแล้ว</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
             <!-- cat6 -->
-            <div class="col-lg-3">
-                <div class="card mb-4 me-4" style="width: 18rem;">
-                    <img src="https://static.wixstatic.com/media/5f33c3_78d9d018a68e4030bd37bbb0a22ac464~mv2.webp"
-                        class="card-img-top rounded mt-2" alt="cat-Munchkin">
-                    <div class="card-body">
-                        <h5 class="card-title">มันช์กิ้น</h5>
-                        <h6 class="card-subtitle mb-2 text-body-secondary">(Munchkin)</h6>
-                        <p class="card-text">ราคาแมวมันช์กิ้น:
-                        <ul>
-                            <li>15,000 - 25,000 บาท</li>
-                        </ul>
-                        </p>
-                        <button type="button" class="btn btn-outline-primary">ข้อมูลเพิ่มเติม</button>
-                        <button type="button" class="btn btn-outline-warning">วิธีการดูแล</button>
+            <div class="card mb-4 me-4" style="width: 18rem;">
+                <img src="https://static.wixstatic.com/media/5f33c3_78d9d018a68e4030bd37bbb0a22ac464~mv2.webp" class="card-img-top rounded mt-2" alt="cat-Munchkin">
+                <div class="card-body">
+                    <h5 class="card-title">มันช์กิ้น</h5>
+                    <h6 class="card-subtitle mb-2 text-body-secondary">(Munchkin)</h6>
+                    <p class="card-text">ราคาแมวมันช์กิ้น:
+                    <ul>
+                        <li>15,000 - 25,000 บาท</li>
+                    </ul>
+                    </p>
+                    <button type="button" class="btn btn-outline-primary">ข้อมูลเพิ่มเติม</button>
+                    <!-- Button trigger modal -->
+                    <button class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#staticBackdrop6">
+                        วิธีการดูแล
+                    </button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="staticBackdrop6" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdrop6" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="staticBackdrop6">วิธีดูแลและอาหารการกิน <i class="bi bi-box2-heart"></i></h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    มันช์กิ้นเป็นสายพันธุ์ที่พลังงานสูง ชอบเคลื่อนไหว ดังนั้นการออกกำลังกายโดยการเล่นของเล่นแมว หรือวิ่งเล่น จะทำให้พวกมันมีความสุขมากขึ้น และเนื่องจากขาที่สั้น มันช์กิ้นจะเลียขนทำความสะอาดตัวเองได้ยากกว่าพันธุ์อื่น ทาสแมวอย่างเรา ๆ ก็ควรจะดูแลเจ้านายในจุดนี้ด้วย
+                                    <br><br>อาหารการกิน มันช์กิ้นควรได้รับสารอาหารประเภทโปรตีนและคาร์โบไฮเดรตที่สูงเพียงพอ เพื่อให้เหมาะสมต่อพลังงานที่มันใช้ต่อวัน โดย Yora อาหารแมวเกรดพรีเมี่ยมจากอังกฤษ มีโภชนาการหลักจากแมลง ซึ่งให้โปรตีนในปริมาณสูง ตอบโจทย์ทุกช่วงอายุของมันช์กิ้นได้เป็นอย่างดี
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal">เข้าใจแล้ว</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
             <!-- cat7 -->
-            <div class="col-lg-3">
-                <div class="card mb-4 me-4" style="width: 18rem;">
-                    <img src="https://static.wixstatic.com/media/5f33c3_2b949a9eb72e40b7a6c60de5974a3d7b~mv2.webp"
-                        class="card-img-top rounded mt-2" alt="cat-Ragdoll">
-                    <div class="card-body">
-                        <h5 class="card-title">แร็กดอลล์</h5>
-                        <h6 class="card-subtitle mb-2 text-body-secondary">(Ragdoll)</h6>
-                        <p class="card-text">ราคาแมวแร็กดอลล์:
-                        <ul>
-                            <li>15,000 - 25,000 บาท</li>
-                        </ul>
-                        </p>
-                        <button type="button" class="btn btn-outline-primary">ข้อมูลเพิ่มเติม</button>
-                        <button type="button" class="btn btn-outline-warning">วิธีการดูแล</button>
+            <div class="card mb-4 me-4" style="width: 18rem;">
+                <img src="https://static.wixstatic.com/media/5f33c3_2b949a9eb72e40b7a6c60de5974a3d7b~mv2.webp" class="card-img-top rounded mt-2" alt="cat-Ragdoll">
+                <div class="card-body">
+                    <h5 class="card-title">แร็กดอลล์</h5>
+                    <h6 class="card-subtitle mb-2 text-body-secondary">(Ragdoll)</h6>
+                    <p class="card-text">ราคาแมวแร็กดอลล์:
+                    <ul>
+                        <li>15,000 - 25,000 บาท</li>
+                    </ul>
+                    </p>
+                    <button type="button" class="btn btn-outline-primary">ข้อมูลเพิ่มเติม</button>
+                    <!-- Button trigger modal -->
+                    <button class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#staticBackdrop7">
+                        วิธีการดูแล
+                    </button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="staticBackdrop7" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdrop7" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="staticBackdrop7">วิธีดูแลและอาหารการกิน <i class="bi bi-box2-heart"></i></h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    แร็กดอลล์ขนยาวมาก การหวีขนบ่อย ๆ จะทำให้เจ้านายของเราขนสวย ไม่เป็นกระจุกและรู้สึกพอใจมากขึ้น
+                                    <br><br>ด้านอาหารการกินของแร็กดอลล์ไม่ใช่เรื่องยุ่งยาก อาหารที่มีโปรตีนและคาร์โบไฮเดตในสัดส่วนที่เหมาะสมต่อน้ำหนักตัวก็เพียงพอ เพียงอาจจะต้องลดปริมาณโซเดียมลงหน่อย เพราะแร็กดอลล์แก่ไปมีโอกาสเกิดโรคไตสูงกว่าพันธุ์อื่น ๆ
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal">เข้าใจแล้ว</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
             <!-- cat8 -->
-            <div class="col-lg-3">
-                <div class="card mb-4 me-4" style="width: 18rem;">
-                    <img src="https://static.wixstatic.com/media/5f33c3_2bcb590c3eda4a80aec1bb3183cc5228~mv2.webp"
-                        class="card-img-top rounded mt-2" alt="cat-Exotic-Shorthair">
-                    <div class="card-body">
-                        <h5 class="card-title">เอ็กโซติก ช็อตแฮร์</h5>
-                        <h6 class="card-subtitle mb-2 text-body-secondary">(Exotic Shorthair)</h6>
-                        <p class="card-text">ราคาแมวเอ็กโซติก ช็อตแฮร์:
-                        <ul>
-                            <li>60,000 - 100,000 บาท</li>
-                        </ul>
-                        </p>
-                        <button type="button" class="btn btn-outline-primary">ข้อมูลเพิ่มเติม</button>
-                        <button type="button" class="btn btn-outline-warning">วิธีการดูแล</button>
+            <div class="card mb-4 me-4" style="width: 18rem;">
+                <img src="https://static.wixstatic.com/media/5f33c3_2bcb590c3eda4a80aec1bb3183cc5228~mv2.webp" class="card-img-top rounded mt-2" alt="cat-Exotic-Shorthair">
+                <div class="card-body">
+                    <h5 class="card-title">เอ็กโซติก ช็อตแฮร์</h5>
+                    <h6 class="card-subtitle mb-2 text-body-secondary">(Exotic Shorthair)</h6>
+                    <p class="card-text">ราคาแมวเอ็กโซติก ช็อตแฮร์:
+                    <ul>
+                        <li>60,000 - 100,000 บาท</li>
+                    </ul>
+                    </p>
+                    <button type="button" class="btn btn-outline-primary">ข้อมูลเพิ่มเติม</button>
+                    <!-- Button trigger modal -->
+                    <button class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#staticBackdrop8">
+                        วิธีการดูแล
+                    </button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="staticBackdrop8" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdrop8" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="staticBackdrop8">วิธีดูแลและอาหารการกิน <i class="bi bi-box2-heart"></i></h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    เอ็กโซติก ช็อตแฮร์ เลี้ยงง่ายและไม่มีปัญหาเกี่ยวกับโรคทางพันธุกรรมที่เฉพาะเจาะจง เพียงแต่พวกมันมีจมูกที่สั้น อาจจะส่งผลต่อการหายใจในอุณหภูมิสูงและโรคไซนัสได้ ทาสควรเลี้ยงเอ็กโซติก ช็อตแฮร์ไว้ในพื้นกระเบื้องเย็น ๆ
+                                    <br><br>อาหารการกิน เอ็กโซติก ช็อตแฮร์ไม่ต้องการสารอาหารพิเศษเพิ่มเติม เพียงแค่โปรตีนและคาร์โบไฮเดรตที่เพียงพอต่อน้ำหนักตัวและการใช้ชีวิตประจำวันก็เพียงพอ
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal">เข้าใจแล้ว</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
             <!-- cat9 -->
-            <div class="col-lg-3">
-                <div class="card mb-4 me-4" style="width: 18rem;">
-                    <img src="https://static.wixstatic.com/media/5f33c3_3943c25d96684b08b59be0caabc1f571~mv2.webp"
-                        class="card-img-top rounded mt-2" alt="cat-Bengal">
-                    <div class="card-body">
-                        <h5 class="card-title">เบงกอล</h5>
-                        <h6 class="card-subtitle mb-2 text-body-secondary">(Bengal)</h6>
-                        <p class="card-text">ราคาแมวเบงกอล:
-                        <ul>
-                            <li>15,000 - 60,000 บาท</li>
-                        </ul>
-                        </p>
-                        <button type="button" class="btn btn-outline-primary">ข้อมูลเพิ่มเติม</button>
-                        <button type="button" class="btn btn-outline-warning">วิธีการดูแล</button>
+            <div class="card mb-4 me-4" style="width: 18rem;">
+                <img src="https://static.wixstatic.com/media/5f33c3_3943c25d96684b08b59be0caabc1f571~mv2.webp" class="card-img-top rounded mt-2" alt="cat-Bengal">
+                <div class="card-body">
+                    <h5 class="card-title">เบงกอล</h5>
+                    <h6 class="card-subtitle mb-2 text-body-secondary">(Bengal)</h6>
+                    <p class="card-text">ราคาแมวเบงกอล:
+                    <ul>
+                        <li>15,000 - 60,000 บาท</li>
+                    </ul>
+                    </p>
+                    <button type="button" class="btn btn-outline-primary">ข้อมูลเพิ่มเติม</button>
+                    <!-- Button trigger modal -->
+                    <button class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#staticBackdrop9">
+                        วิธีการดูแล
+                    </button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="staticBackdrop9" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdrop9" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="staticBackdrop9">วิธีดูแลและอาหารการกิน <i class="bi bi-box2-heart"></i></h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    ด้วยสัญชาติญาณแมวป่า ที่กะตือรือร้นและพลังงานสูง เบงกอลจึงเป็นอีกสายพันธุ์ที่มีพลังงานล้น และควรออกกำลังกายอย่างสม่ำเสมอ การมีเสาฝนหรือคอนโดแมวสูง ๆ เพื่อให้พวกมันปีนป่ายจะเป็นอุปกรณ์เสริมในการดูแลเบงกอลที่ดี
+                                    <br><br>อาหารการกิน เบงกอลเป็นแมวสายพันธุ์กินเนื้อ ดังนั้นพวกมันต้องการโปรตีนในปริมาณสูงกว่าพันธุ์อื่น ๆ โดยอยู่ที่ 50-80% ของปริมาณอาหารทั้งหมด และไม่ต้องคาร์โบไฮเดรตที่สูงเกินไป
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal">เข้าใจแล้ว</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
             <!-- cat10 -->
-            <div class="col-lg-3">
-                <div class="card mb-4 me-4" style="width: 18rem;">
-                    <img src="https://static.wixstatic.com/media/5f33c3_ed5a7091732141a5bc8ef06fc084f509~mv2.webp"
-                        class="card-img-top rounded mt-2" alt="cat-Siamese">
-                    <div class="card-body">
-                        <h5 class="card-title">วิเชียรมาศ</h5>
-                        <h6 class="card-subtitle mb-2 text-body-secondary">(Siamese)</h6>
-                        <p class="card-text">ราคาแมววิเชียรมาศ:
-                        <ul>
-                            <li>3,000 - 10,000 บาท</li>
-                        </ul>
-                        </p>
-                        <button type="button" class="btn btn-outline-primary">ข้อมูลเพิ่มเติม</button>
-                        <button type="button" class="btn btn-outline-warning">วิธีการดูแล</button>
+            <div class="card mb-4 me-4" style="width: 18rem;">
+                <img src="https://static.wixstatic.com/media/5f33c3_ed5a7091732141a5bc8ef06fc084f509~mv2.webp" class="card-img-top rounded mt-2" alt="cat-Siamese">
+                <div class="card-body">
+                    <h5 class="card-title">วิเชียรมาศ</h5>
+                    <h6 class="card-subtitle mb-2 text-body-secondary">(Siamese)</h6>
+                    <p class="card-text">ราคาแมววิเชียรมาศ:
+                    <ul>
+                        <li>3,000 - 10,000 บาท</li>
+                    </ul>
+                    </p>
+                    <button type="button" class="btn btn-outline-primary">ข้อมูลเพิ่มเติม</button>
+                    <!-- Button trigger modal -->
+                    <button class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#staticBackdrop10">
+                        วิธีการดูแล
+                    </button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="staticBackdrop10" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdrop10" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="staticBackdrop10">วิธีดูแลและอาหารการกิน <i class="bi bi-box2-heart"></i></h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    ด้วยความที่ขนสั้น แขนขายาว วิเชียรมาศสามารถเลียขนเพื่อทำความสะอาดตัวเองได้ ไม่จำเป็นต้องอาบน้ำบ่อย ๆ แค่เพียงเดือนละครั้งก็เพียงพอ
+                                    <br><br>อาหารการกิน วิเชียรมาศเป็นแมวที่มีระบบทางเดินอาหารไม่ค่อยดีนัก การใส่ใจในโภชนการจึงเป็นสิ่งสำคัญ โดยอาหารควรอุดมไปด้วยวิตามินและแร่ธาตุเสริมมากกว่าพันธุ์อื่น ๆ
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal">เข้าใจแล้ว</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
             <!-- cat11 -->
-            <div class="col-lg-3">
-                <div class="card mb-4 me-4" style="width: 18rem;">
-                    <img src="https://static.wixstatic.com/media/5f33c3_19399e11dfc44a97b6c4d51cbcdf1aa1~mv2.webp"
-                        class="card-img-top rounded mt-2" alt="cat-Maine-Coon">
-                    <div class="card-body">
-                        <h5 class="card-title">เมนคูน</h5>
-                        <h6 class="card-subtitle mb-2 text-body-secondary">(Maine Coon)</h6>
-                        <p class="card-text">ราคาแมวเมนคูน:
-                        <ul>
-                            <li>10,000 - 60,000 บาท</li>
-                        </ul>
-                        </p>
-                        <button type="button" class="btn btn-outline-primary">ข้อมูลเพิ่มเติม</button>
-                        <button type="button" class="btn btn-outline-warning">วิธีการดูแล</button>
+            <div class="card mb-4 me-4" style="width: 18rem;">
+                <img src="https://static.wixstatic.com/media/5f33c3_19399e11dfc44a97b6c4d51cbcdf1aa1~mv2.webp" class="card-img-top rounded mt-2" alt="cat-Maine-Coon">
+                <div class="card-body">
+                    <h5 class="card-title">เมนคูน</h5>
+                    <h6 class="card-subtitle mb-2 text-body-secondary">(Maine Coon)</h6>
+                    <p class="card-text">ราคาแมวเมนคูน:
+                    <ul>
+                        <li>10,000 - 60,000 บาท</li>
+                    </ul>
+                    </p>
+                    <button type="button" class="btn btn-outline-primary">ข้อมูลเพิ่มเติม</button>
+                    <!-- Button trigger modal -->
+                    <button class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#staticBackdrop11">
+                        วิธีการดูแล
+                    </button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="staticBackdrop11" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdrop11" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="staticBackdrop11">วิธีดูแลและอาหารการกิน <i class="bi bi-box2-heart"></i></h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    แมวเมนคูนเลี้ยงไม่ยาก เพียงแค่หมั่นแปรงขนอันแสนยาวไม่ให้พันกันและมีคอนโดแมวสูง ๆ สัก 1 อันก็เพียงพอให้มันได้ปีนป่ายและออกกำลังกายภายในบ้าน
+                                    <br><br>อาหารการกิน เมนคูนมีขนาดใหญ่ พวกมันจึงต้องการอาหารที่คอยเสริมกล้ามเนื้อและเหมาะแก่น้ำหนักตัวที่มากกว่าแมวชนิดอื่น ๆ โดยควรเน้นไปที่โปรตีนและคาร์โบไฮเดรต
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal">เข้าใจแล้ว</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
             <!-- cat12 -->
-            <div class="col-lg-3">
-                <div class="card mb-4 me-4" style="width: 18rem;">
-                    <img src="https://static.wixstatic.com/media/5f33c3_e11fea3722044b29af8a0cda4c8b0412~mv2.jpg/v1/fill/w_460,h_480,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/c6a3da_b7fbe3edabaf41c393f7ce014e6b7341~.jpg"
-                        class="card-img-top rounded mt-2" alt="cat-American-Curl">
-                    <div class="card-body">
-                        <h5 class="card-title">อเมริกัน เคิร์ล</h5>
-                        <h6 class="card-subtitle mb-2 text-body-secondary">(American Curl)</h6>
-                        <p class="card-text">ราคาแมวอเมริกัน เคิร์ล:
-                        <ul>
-                            <li>10,000 - 20,000 บาท</li>
-                        </ul>
-                        </p>
-                        <button type="button" class="btn btn-outline-primary">ข้อมูลเพิ่มเติม</button>
-                        <button type="button" class="btn btn-outline-warning">วิธีการดูแล</button>
+            <div class="card mb-4 me-4" style="width: 18rem;">
+                <img src="https://static.wixstatic.com/media/5f33c3_e11fea3722044b29af8a0cda4c8b0412~mv2.jpg/v1/fill/w_460,h_480,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/c6a3da_b7fbe3edabaf41c393f7ce014e6b7341~.jpg" class="card-img-top rounded mt-2" alt="cat-American-Curl">
+                <div class="card-body">
+                    <h5 class="card-title">อเมริกัน เคิร์ล</h5>
+                    <h6 class="card-subtitle mb-2 text-body-secondary">(American Curl)</h6>
+                    <p class="card-text">ราคาแมวอเมริกัน เคิร์ล:
+                    <ul>
+                        <li>10,000 - 20,000 บาท</li>
+                    </ul>
+                    </p>
+                    <button type="button" class="btn btn-outline-primary">ข้อมูลเพิ่มเติม</button>
+                    <!-- Button trigger modal -->
+                    <button class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#staticBackdrop12">
+                        วิธีการดูแล
+                    </button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="staticBackdrop12" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdrop12" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="staticBackdrop12">วิธีดูแลและอาหารการกิน <i class="bi bi-box2-heart"></i></h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    ด้วยความที่พวกมันมีหูที่พลิกม้วน ดังนั้นหูของของอเมริกัน เคิร์ลควรได้รับการดูแลอย่างพิเศษ โดยหมั่นใช้ผ้าชุบน้ำเช็ดทำความสะอาดบ่อย ๆ และหมั่นแปรงขนให้ไม่ยุ่งและพันกันบ่อย ๆ เพราะอเมริกัน เคิร์ลผลัดขนออกมาเยอะมาก
+                                    <br><br>อาหารการกินนั้น อเมริกัน เคิร์ลต้องการอาหารจำพวกโปรตีน และสารอาหารพิเศษที่ใช้ในการบำรุงขนของพวกมันให้สวยงาม โดย Yora อาหารแมวเกรดพรีเมี่ยม นำเข้าจากอังกฤษ มีโภชนาการหลักจากแมลงซึ่งอุดมไปด้วยโปรตีนสูง รวมถึงใยอาหารต่าง ๆ ที่จะบำรุงขนของอเมริกัน เคิร์ลให้สวยงาม
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal">เข้าใจแล้ว</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -266,16 +462,9 @@
 
     <!-- footer -->
     <footer>
-        <hr>
-        <br><br><br>
-        <h1 class="text-center">MiewMiew</h1>
-        <br>
-        <h6 class="text-center">info@mysite.com</h6>
-        <br><br><br>
+        <?php include("footer.php") ?>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 
 </html>
